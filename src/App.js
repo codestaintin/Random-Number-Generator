@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import SubHeader from './components/Header/SubHeader'
+import Input from './components/Input/Input';
+import PhoneNumbers from './components/PhoneNumbers/PhoneNumber';
+import SortBy from './components/Sort/SortBy';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Fragment>
+        <Header />
+        <div className="wrapper">
+          <SubHeader />
+          <div className="App-body">
+            <div className="input-wrapper">
+              <Input />
+              <SortBy />
+            </div>
+            <PhoneNumbers />
+          </div>
+        </div>
+      </Fragment>
     );
   }
 }
