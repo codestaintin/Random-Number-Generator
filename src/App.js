@@ -18,7 +18,8 @@ class App extends Component {
     phoneNumbers: [],
     max: null,
     min: null,
-    total: 0
+    total: 0,
+    defaultSort: 'asc'
   };
 
   /**
@@ -63,6 +64,37 @@ class App extends Component {
     }
   };
   /**
+   * Sort Phone numbers
+   */
+  sortPhoneNumbers = () => {
+    const { defaultSort, phoneNumbers } = this.state;
+    if (!phoneNumbers.length > 0) return;
+    if(defaultSort === 'asc'){
+      this.setState({
+        phoneNumbers : phoneNumbers.sort((a, b) => 0 - (a > b ? -1 : 1))
+      });
+    } else {
+      this.setState({
+        phoneNumbers : phoneNumbers.sort((a, b) => 0 - (a > b ? 1 : -1))
+      })
+    }
+  };
+
+  /**
+   * Handle sort change
+   *
+   * @return {object} event
+   * @param {object} event
+   */
+  handleSortChange = event => {
+    event.preventDefault();
+    const sorter = event.target.value;
+    this.setState({
+      sorter
+    }, () => this.sortPhoneNumbers());
+  };
+
+  /**
    * Handle number generation
    *
    * @return {object} event
@@ -83,9 +115,10 @@ class App extends Component {
     }
     return this.setState({
       phoneNumbers
-    }, () => {
-      this.handleMinMax()
-    });
+    }, () =>
+      this.handleMinMax(),
+      this.sortPhoneNumbers()
+    );
   };
 
   render() {
@@ -110,7 +143,10 @@ class App extends Component {
                 onClick={this.handleNumberGeneration}
                 onChange={this.handleInput}
               />
-              <SortBy />
+              <SortBy
+                phoneNumbers={phoneNumbers}
+                onChange={this.handleSortChange}
+              />
             </div>
             <PhoneNumbers
               phoneNumbers={phoneNumbers}
