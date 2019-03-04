@@ -7,33 +7,26 @@ import PhoneNumbers from './components/PhoneNumbers/PhoneNumber';
 import SortBy from './components/Sort/SortBy';
 import Error from './components/Error/Error';
 
-
+/**
+ * App class
+ */
 class App extends Component {
   state = {
     error: false,
     message: "",
     bound: 1,
-    phoneNumbers: []
+    phoneNumbers: [],
+    max: null,
+    min: null,
+    total: 0
   };
 
-  handleNumberGeneration = event => {
-    event.preventDefault();
-    const { bound } = this.state;
-    if (bound > 10000) return this.setState({
-      error: true,
-      message: "Please enter a number less than 10000"
-    });
-    let phoneNumbers = [];
-    let phoneNumber = 0;
-    while (phoneNumber < bound) {
-      phoneNumbers.push('0' + Math.floor(Math.random() * 900000000 + 100000000));
-      phoneNumber++;
-    }
-    return this.setState({
-      phoneNumbers
-    });
-  };
-
+  /**
+   * Handle Input
+   *
+   * @return {object} event
+   * @param {object} event
+   */
   handleInput = async event => {
     event.preventDefault();
     const bound = event.target.value;
@@ -50,12 +43,61 @@ class App extends Component {
       })
     }
   };
+  /**
+   * Handle MinMax
+   *
+   * @return {object} event
+   * @param {object} event
+   */
+  handleMinMax = () => {
+    const { phoneNumbers } = this.state;
+    if (phoneNumbers.length > 0) {
+      const min = Math.min(...phoneNumbers);
+      const max = Math.max(...phoneNumbers);
+      const total = phoneNumbers.length;
+      this.setState({
+        min,
+        max,
+        total
+      })
+    }
+  };
+  /**
+   * Handle number generation
+   *
+   * @return {object} event
+   * @param {object} event
+   */
+  handleNumberGeneration = event => {
+    event.preventDefault();
+    const { bound } = this.state;
+    if (bound > 10000) return this.setState({
+      error: true,
+      message: "Please enter a number less than 10000"
+    });
+    let phoneNumbers = [];
+    let phoneNumber = 0;
+    while (phoneNumber < bound) {
+      phoneNumbers.push('0' + Math.floor(Math.random() * 900000000 + 100000000));
+      phoneNumber++;
+    }
+    return this.setState({
+      phoneNumbers
+    }, () => {
+      this.handleMinMax()
+    });
+  };
 
   render() {
-    const { error, message, phoneNumbers } = this.state;
+    const { error, message, phoneNumbers, max, min, total } = this.state;
     return (
       <Fragment>
-        <Header />
+        <Header
+          phoneNumbers={phoneNumbers}
+          min={min}
+          max={max}
+          total={total}
+        />
         <div className="wrapper">
           <SubHeader />
           <div className="App-body">

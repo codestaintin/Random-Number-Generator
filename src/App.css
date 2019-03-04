@@ -7,11 +7,12 @@
     color: #131883;
     flex: 1 1 auto;
     justify-content: center;
+    height: 50vh;
 }
 .App-header h1 {
     font-size: 120px;
     font-weight: 500;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
 }
 
 .App-header h3 {
