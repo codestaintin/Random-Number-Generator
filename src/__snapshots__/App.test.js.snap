@@ -1,0 +1,509 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Test should render the App component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Header
+          max={null}
+          min={null}
+          phoneNumbers={Array []}
+          total={0}
+        />,
+        <div
+          className="wrapper"
+        >
+          <SubHeader />
+          <div
+            className="App-body"
+          >
+            <Error
+              error={false}
+              message=""
+            />
+            <div
+              className="input-wrapper"
+            >
+              <Input
+                onChange={[Function]}
+                onClick={[Function]}
+              />
+              <SortBy
+                onChange={[Function]}
+                phoneNumbers={Array []}
+              />
+            </div>
+            <ExportButton
+              onClick={[Function]}
+              phoneNumbers={Array []}
+            />
+            <GeneratedNumbers
+              phoneNumbers={Array []}
+            />
+          </div>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "max": null,
+          "min": null,
+          "phoneNumbers": Array [],
+          "total": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <SubHeader />,
+            <div
+              className="App-body"
+            >
+              <Error
+                error={false}
+                message=""
+              />
+              <div
+                className="input-wrapper"
+              >
+                <Input
+                  onChange={[Function]}
+                  onClick={[Function]}
+                />
+                <SortBy
+                  onChange={[Function]}
+                  phoneNumbers={Array []}
+                />
+              </div>
+              <ExportButton
+                onClick={[Function]}
+                phoneNumbers={Array []}
+              />
+              <GeneratedNumbers
+                phoneNumbers={Array []}
+              />
+            </div>,
+          ],
+          "className": "wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Error
+                  error={false}
+                  message=""
+                />,
+                <div
+                  className="input-wrapper"
+                >
+                  <Input
+                    onChange={[Function]}
+                    onClick={[Function]}
+                  />
+                  <SortBy
+                    onChange={[Function]}
+                    phoneNumbers={Array []}
+                  />
+                </div>,
+                <ExportButton
+                  onClick={[Function]}
+                  phoneNumbers={Array []}
+                />,
+                <GeneratedNumbers
+                  phoneNumbers={Array []}
+                />,
+              ],
+              "className": "App-body",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "error": false,
+                  "message": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Input
+                      onChange={[Function]}
+                      onClick={[Function]}
+                    />,
+                    <SortBy
+                      onChange={[Function]}
+                      phoneNumbers={Array []}
+                    />,
+                  ],
+                  "className": "input-wrapper",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "onChange": [Function],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "onChange": [Function],
+                      "phoneNumbers": Array [],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "onClick": [Function],
+                  "phoneNumbers": Array [],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "phoneNumbers": Array [],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Header
+            max={null}
+            min={null}
+            phoneNumbers={Array []}
+            total={0}
+          />,
+          <div
+            className="wrapper"
+          >
+            <SubHeader />
+            <div
+              className="App-body"
+            >
+              <Error
+                error={false}
+                message=""
+              />
+              <div
+                className="input-wrapper"
+              >
+                <Input
+                  onChange={[Function]}
+                  onClick={[Function]}
+                />
+                <SortBy
+                  onChange={[Function]}
+                  phoneNumbers={Array []}
+                />
+              </div>
+              <ExportButton
+                onClick={[Function]}
+                phoneNumbers={Array []}
+              />
+              <GeneratedNumbers
+                phoneNumbers={Array []}
+              />
+            </div>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "max": null,
+            "min": null,
+            "phoneNumbers": Array [],
+            "total": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <SubHeader />,
+              <div
+                className="App-body"
+              >
+                <Error
+                  error={false}
+                  message=""
+                />
+                <div
+                  className="input-wrapper"
+                >
+                  <Input
+                    onChange={[Function]}
+                    onClick={[Function]}
+                  />
+                  <SortBy
+                    onChange={[Function]}
+                    phoneNumbers={Array []}
+                  />
+                </div>
+                <ExportButton
+                  onClick={[Function]}
+                  phoneNumbers={Array []}
+                />
+                <GeneratedNumbers
+                  phoneNumbers={Array []}
+                />
+              </div>,
+            ],
+            "className": "wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Error
+                    error={false}
+                    message=""
+                  />,
+                  <div
+                    className="input-wrapper"
+                  >
+                    <Input
+                      onChange={[Function]}
+                      onClick={[Function]}
+                    />
+                    <SortBy
+                      onChange={[Function]}
+                      phoneNumbers={Array []}
+                    />
+                  </div>,
+                  <ExportButton
+                    onClick={[Function]}
+                    phoneNumbers={Array []}
+                  />,
+                  <GeneratedNumbers
+                    phoneNumbers={Array []}
+                  />,
+                ],
+                "className": "App-body",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "error": false,
+                    "message": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <Input
+                        onChange={[Function]}
+                        onClick={[Function]}
+                      />,
+                      <SortBy
+                        onChange={[Function]}
+                        phoneNumbers={Array []}
+                      />,
+                    ],
+                    "className": "input-wrapper",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "onChange": [Function],
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "onChange": [Function],
+                        "phoneNumbers": Array [],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "onClick": [Function],
+                    "phoneNumbers": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "phoneNumbers": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
