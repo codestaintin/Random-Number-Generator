@@ -124,7 +124,7 @@ describe('App Test', () => {
     instance.handleSortChange(event);
     const state = shallowComponent.state();
 
-    expect(state.sorter).toBe('desc');
+    expect(state.defaultSort).toBe('asc');
     expect(spy).toHaveBeenCalled();
     spy.mockRestore();
   });
@@ -142,7 +142,7 @@ describe('App Test', () => {
     instance.handleSortChange(event);
     const state = shallowComponent.state();
 
-    expect(state.sorter).toBe('asc');
+    expect(state.defaultSort).toBe('asc');
     expect(spy).toHaveBeenCalled();
     spy.mockRestore();
   });
