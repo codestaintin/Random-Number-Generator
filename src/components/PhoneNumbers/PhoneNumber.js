@@ -1,15 +1,19 @@
 import React from 'react';
 
-const GeneratedNumbers = () => (
+const GeneratedNumbers = ({ phoneNumbers }) => (
   <div>
-    <h3><b>Generated Numbers</b></h3>
+    { phoneNumbers.length > 1 ?
+      <h3><b>Generated Phone Numbers</b></h3>
+      :
+      <span><i>No phone numbers at the moment</i></span>
+    }
     <div>
       <ul className="generated-phone-numbers">
-        <li>0898776765</li>
-        <li>0898776765</li>
-        <li>0898776765</li>
-        <li>0898776765</li>
-        <li>0898776765</li>
+        {
+          phoneNumbers && phoneNumbers.map(number => (
+            <li key={number}>{number}</li>
+          ))
+        }
       </ul>
     </div>
   </div>
