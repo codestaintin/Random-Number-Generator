@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "coveralls": "^3.0.2",
+    "file-saver": "^2.0.1",
+    "prop-types": "^15.6.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5"
+  },
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,6 +23,12 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js"
+    ]
   },
   "browserslist": [
     ">0.2%",
