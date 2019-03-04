@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import saveAs from 'file-saver';
 import './App.css';
 import Header from './components/Header/Header';
 import SubHeader from './components/Header/SubHeader'
@@ -6,6 +7,7 @@ import Input from './components/Input/Input';
 import PhoneNumbers from './components/PhoneNumbers/PhoneNumber';
 import SortBy from './components/Sort/SortBy';
 import Error from './components/Error/Error';
+import ExportButton from './components/Export/ExportButton';
 
 /**
  * App class
@@ -120,6 +122,17 @@ class App extends Component {
       this.sortPhoneNumbers()
     );
   };
+  /**
+   * Export phone numbers
+   */
+  exportPhoneNumbers = () => {
+    const { phoneNumbers } = this.state;
+    if (phoneNumbers.length > 0) {
+      saveAs(new Blob(phoneNumbers, {
+        type: "text/csv;charset=utf-8"
+      }), 'generated_phone_numbers.csv')
+    }
+  };
 
   render() {
     const { error, message, phoneNumbers, max, min, total } = this.state;
@@ -148,6 +161,10 @@ class App extends Component {
                 onChange={this.handleSortChange}
               />
             </div>
+            <ExportButton
+              phoneNumbers={phoneNumbers}
+              onClick={this.exportPhoneNumbers}
+            />
             <PhoneNumbers
               phoneNumbers={phoneNumbers}
             />
