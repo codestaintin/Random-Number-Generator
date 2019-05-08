@@ -55,8 +55,8 @@ class App extends Component {
   handleMinMax = () => {
     const { phoneNumbers } = this.state;
     if (phoneNumbers.length > 0) {
-      const min = Math.min(...phoneNumbers);
-      const max = Math.max(...phoneNumbers);
+      const min = '0' + Math.min(...phoneNumbers);
+      const max = '0' + Math.max(...phoneNumbers);
       const total = phoneNumbers.length;
       this.setState({
         min,
