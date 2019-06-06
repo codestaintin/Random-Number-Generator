@@ -12,16 +12,18 @@
     "react-scripts": "2.1.5"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
-    "coveralls": "^3.0.2"
+    "testcafe": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test -u --coverage",
     "eject": "react-scripts eject",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test:e2e": "testcafe chrome e2e/app.test.js -e -q --debug-on-fail"
   },
   "eslintConfig": {
     "extends": "react-app"
